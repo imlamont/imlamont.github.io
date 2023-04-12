@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+.word {
+    font-family: monospace,monospace;
+    color:white;
+}
+
+.letter::before {
+    content: "";
+    color:white;
+    opacity: 0;
+    animation-name: letterIn;
+    animation-fill-mode: forwards;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes letterIn {
+    100% {content: " ";}
+}

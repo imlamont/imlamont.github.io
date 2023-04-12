@@ -4,10 +4,12 @@ const splitWord = id => {
 
     elem.innerText="";
 
+    var c=1;
     text.forEach(ltr => {
         const spn=document.createElement("span");
         spn.className="letter";
         spn.innerText=ltr;
+        spn.style.animationDuration=c++;
         elem.appendChild(spn);
     });
 }
