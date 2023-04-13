@@ -2,22 +2,54 @@ body {
     background-color: black;
 }
 
-.word {
-    font-family: monospace,monospace;
+/* good off white color:rgb(255, 244, 214);*/
+
+.monoFont {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.sansFont {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 40px;
     color:white;
 }
 
-.letter::before {
-    content: "";
-    color:white;
+.letter {
     opacity: 0;
     animation-name: letterIn;
+    animation-duration: 0s;
     animation-fill-mode: forwards;
-    animation-timing-function:linear;
-    animation-iteration-count: infinite;
-    animation-direction: reverse;
+    animation-timing-function:step-end;
+    animation-direction:normal;
 }
 
 @keyframes letterIn {
-    100% {content: " ";}
+    100% {opacity: 1;}
+}
+
+#opener {
+    animation-delay: 2s;
+    width:40%;
+    text-align: center;
+    font-size: 40px;
+    color:white;
+    padding: 20% 30%;
+}
+
+.typed {
+    /* width: fit-content; */
+    margin:0;
+}
+
+.cursor {
+    opacity: 1;
+    display: inline-block;
+    animation-name: moveCursor;
+    animation-fill-mode: forwards;
+    /* animation-timing-function:steps(10,end); */
+    animation-direction: reverse;
+}
+
+@keyframes moveCursor {
+    100% {transform: translateX(-10ch);}
 }
