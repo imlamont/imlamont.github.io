@@ -33,7 +33,14 @@ body {
     text-align: center;
     font-size: 40px;
     color:white;
-    padding: 20% 30%;
+    padding: 20% 30% 10%;
+}
+
+#roles {
+    text-align: center;
+    font-size: 15px;
+    color:white;
+    padding-top: 10%;
 }
 
 .typed {
